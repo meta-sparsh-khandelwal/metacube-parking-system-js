@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- adding favicon -->
+    <link rel="icon" type="image/x-icon" href="/images/logo.svg">
+    <!-- adding google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&family=Roboto&display=swap"
+        rel="stylesheet">
+    <!-- external stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <title>Metacube Parking System</title>
+</head>
+
+<body>
+    <header>
+        <nav id="navbar">
+            <a href="/"> <img src="images/logo.svg" id="logo" alt="logo"> </a>
+            <ul id="navigation">
+                <li><a href="#employee">Add Employee</a></li>
+                <li><a href="#vehicle">Add Vehicle</a></li>
+                <li><a href="#feedback">Give Feedback</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+            </ul>
+        </nav>
+        <div id="banner">
+        </div>
+    </header>
+    <!-- Form section for adding a new employee -->
+    <section id="employee" class="container">
+        <button class="heading-primary btn-collapse collapse">Employee details</button>
+        <form action="#" method="post" id="employeeForm" class="metaForm">
+            <div class="wrapper-padding">
+                <label for="fullname" class="heading-tertiary employeeLabelText employeeInput" id="check1"> Fullname
+                    <input type="text" name="fullname" id="fullname" class="para" required />
+                </label>
+                <div class="radio employeeInput"> <span class="heading-tertiary employeeLabelText">Gender</span><br />
+                    <label for="male">
+                        <input type="radio" id="male" name="gender" value="male" required /> Male
+                    </label>
+                    <label for="female">
+                        <input type="radio" id="female" name="gender" value="female" /> Female
+                    </label>
+                </div>
+                <label for="email" class="heading-tertiary employeeInput" id="check2"> <span class="employeeLabelText">Email</span>
+                    <input type="email" name="email" id="email" class="para" required />    
+                </label>
+                <label for="password" class="heading-tertiary employeeInput" id="check3"> <span class="employeeLabelText">Password</span>
+                    <input type="password" id="password" name="password" class="para" required>
+                </label>
+                <label for="confirm_password" class="heading-tertiary employeeInput" id="check4"><span class="employeeLabelText">Confirm Password</span>
+                    <input type="password" id="confirm_password" name="confirm_password" class="para" required />
+                </label>
+                <label for="phone" class="heading-tertiary employeeInput" id="check5"><span class="employeeLabelText">Phone Number</span> 
+                    <input type="tel" id="phone" class="para" name="phone" pattern="(6|7|8|9)\d{9}"
+                    title="Must be a phone number of 10 digits" required />
+                </label>
+                <button type="submit" id="addEmployeeBtn" class="btn-secondary"> Add Employee </button>
+            </div>
+        </form>
+    </section>
+    <!-- Form section for adding a new vehicle -->
+    <section id="vehicle" class="container">
+        <button class="heading-primary btn-collapse collapse">Vehicle details</button>
+        <form action="" id="vehicleForm" class="metaForm">
+            <div class="wrapper-padding">
+                <label for="vehicle-make" class="heading-tertiary vehicleInput"> Vehicle Make
+                    <input type="text" name="vehicle-make" id="vehicle-make" required />    
+                </label>
+                <label for="vehicle-model" class="heading-tertiary vehicleInput"> Vehicle Model
+                    <input type="text" name="vehicle-model" id="vehicle-model" required />    
+                </label>
+                <label for="vehicle-type" class="heading-tertiary vehicleInput"> Which Vehicle do you have?
+                    <select name="vehicle-type" id="vehicle-type" required>
+                        <option value="cycle"> Cycle </option>
+                        <option value="motorcycle"> MotorCycle </option>
+                        <option value="four-wheeler"> Four Wheeler </option>
+                    </select>    
+                </label>
+                <label for="vehicle-number" class="heading-tertiary vehicleInput"> Vehicle Number 
+                    <input type="text" id="vehicle-number" name="vehicle-number" required />
+                </label>
+                <label for="employee-id" class="heading-tertiary vehicleInput"> Employee Id 
+                    <input type="text" id="employee-id" name="employee-id" pattern="^[a-zA-Z].*" required />
+                </label>
+                <textarea name="vehicle-identification" id="vehicle-identification" cols="20" rows="3"
+                    placeholder="Vehicle Identification (If Any)" class="vehicleInput"></textarea>
+                <a type="submit" href="#pricing" class="btn-secondary" id="addVehicleBtn"> Get Pass </a>
+            </div>
+        </form>
+    </section>
+    <!-- Feedback section -->
+    <section id="feedback" class="container">
+        <h1 class="heading-primary">Get in Touch:</h1>
+        <div id="feedbackWrapper">
+            <img src="images/feedback.svg" alt="feedbackIMG">
+            <form action="" id="feedbackForm">
+                <label for="employee-name" class="heading-tertiary"> Name </label>
+                <input type="text" name="employee-name" id="employee-name" required />
+                <label for="feedbackEmail" class="heading-tertiary"> Email </label>
+                <input type="email" name="feedbackEmail" id="feedbackEmail" required />
+                <textarea name="feedbackMessage" id="feedbackMessage" cols="30" rows="10"
+                    placeholder="What's on your mind ?..."></textarea>
+                <button type="submit" class="btn-feedback"> Send Message </button>
+            </form>
+        </div>
+    </section>
+    <!-- Pricing section : shows pricing of different vehicle types -->
+    <section id="pricing" >
+        <h2 class="heading-primary">Pricing:</h2>
+        <div class="pricing-card" id="cycle">
+            <h3 class="heading-secondary">Cycle</h3>
+            <div class="price-highlight"><strong>$100</strong> / month</div>
+            <label for="cycle-daily" class="prices">
+                <input type="radio" id="cycle-daily" name="cycle-price" value="5" required />$5 Daily
+            </label>
+            <label for="cycle-monthly" class="prices">
+                <input type="radio" id="cycle-monthly" name="cycle-price" value="100" />$100 Monthly
+            </label>
+            <label for="cycle-monthly" class="prices">
+                <input type="radio" id="cycle-monthly" name="cycle-price" value="500" />$500 Yearly
+            </label>
+            <a href="#" target="_blank">
+                <button class="btn-purchase btn-primary"> Purchase Now </button> </a>
+        </div>
+        <div class="pricing-card" id="motorcycle">
+            <h3 class="heading-secondary">MotorCycle</h3>
+            <div class="price-highlight"><strong> $200 </strong> / month</div>
+            <label for="motorcycle-daily" class="prices">
+                <input type="radio" id="motorcycle-daily" name="motorcycle-price" value="10" required />$10 Daily
+            </label>
+            <label for="motorcycle-monthly" class="prices">
+                <input type="radio" id="motorcycle-monthly" name="motorcycle-price" value="200" />$200 Monthly
+            </label>
+            <label for="motorcycle-monthly" class="prices">
+                <input type="radio" id="motorcycle-monthly" name="motorcycle-price" value="1000" />$1000 Yearly
+            </label>
+            <a href="#" target="_blank">
+                <button class="btn-purchase btn-primary"> Purchase Now </button> </a>
+        </div>
+        <div class="pricing-card" id="four-wheeler">
+            <h3 class="heading-secondary">Four Wheeler</h3>
+            <div class="price-highlight"><strong> $500 </strong> / month</div>
+            <label for="four-wheeler-daily" class="prices">
+                <input type="radio" id="four-wheeler-daily" name="four-wheeler-price" value="20" required />$20 Daily
+            </label>
+            <label for="four-wheeler-monthly" class="prices">
+                <input type="radio" id="four-wheeler-monthly" name="four-wheeler-price" value="500" />$500 Monthly
+            </label>
+            <label for="four-wheeler-monthly" class="prices">
+                <input type="radio" id="four-wheeler-monthly" name="four-wheeler-price" value="3500" />$3500 Yearly
+            </label>
+            <a href="#" target="_blank">
+                <button class="btn-purchase btn-primary"> Purchase Now </button> </a>
+        </div>
+    </section>
+    <footer>
+        Copyright &copy; 2022 Metacube.com. All rights reserved.
+    </footer>
+</body>
+<script src="index.js"></script>
+
+</html>

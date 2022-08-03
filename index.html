@@ -113,49 +113,57 @@
     <!-- Pricing section : shows pricing of different vehicle types -->
     <section id="pricing" >
         <h2 class="heading-primary">Pricing:</h2>
+        <div id="currency">
+            Currency : 
+            <select name="currency" onchange="changeCurrency()" id="currencySelect">
+                <option value="INR">INR</option>
+                <option value="USD">USD</option>
+                <option value="YEN">YEN</option>
+            </select>
+        </div>
         <div class="pricing-card" id="cycle">
             <h3 class="heading-secondary">Cycle</h3>
-            <div class="price-highlight"><strong>$100</strong> / month</div>
+            <div class="price-highlight"><strong><span class="currencySymbol"> &#8377; </span> <span class="currencyValue">100</span> </strong> / month</div>
             <label for="cycle-daily" class="prices">
-                <input type="radio" id="cycle-daily" name="cycle-price" value="5" required />$5 Daily
+                <input type="radio" id="cycle-daily" name="cycle-price" value="5" required /><span class="currencySymbol"> &#8377; </span> <span class="currencyValue">5</span>  Daily
             </label>
             <label for="cycle-monthly" class="prices">
-                <input type="radio" id="cycle-monthly" name="cycle-price" value="100" />$100 Monthly
+                <input type="radio" id="cycle-monthly" name="cycle-price" value="100" /><span class="currencySymbol"> &#8377; </span> <span class="currencyValue">100</span>  Monthly
             </label>
             <label for="cycle-monthly" class="prices">
-                <input type="radio" id="cycle-monthly" name="cycle-price" value="500" />$500 Yearly
+                <input type="radio" id="cycle-monthly" name="cycle-price" value="500" /><span class="currencySymbol"> &#8377; </span> <span class="currencyValue">500</span>  Yearly
             </label>
-            <a href="#" target="_blank">
+            <a href="#pricing">
                 <button class="btn-purchase btn-primary"> Purchase Now </button> </a>
         </div>
         <div class="pricing-card" id="motorcycle">
             <h3 class="heading-secondary">MotorCycle</h3>
-            <div class="price-highlight"><strong> $200 </strong> / month</div>
+            <div class="price-highlight"><strong> <span class="currencySymbol"> &#8377; </span> <span class="currencyValue">200</span> </strong> / month</div>
             <label for="motorcycle-daily" class="prices">
-                <input type="radio" id="motorcycle-daily" name="motorcycle-price" value="10" required />$10 Daily
+                <input type="radio" id="motorcycle-daily" name="motorcycle-price" value="10" required /><span class="currencySymbol"> &#8377; </span><span class="currencyValue">10</span> Daily
             </label>
             <label for="motorcycle-monthly" class="prices">
-                <input type="radio" id="motorcycle-monthly" name="motorcycle-price" value="200" />$200 Monthly
+                <input type="radio" id="motorcycle-monthly" name="motorcycle-price" value="200" /><span class="currencySymbol"> &#8377; </span> <span class="currencyValue">200</span> Monthly
             </label>
             <label for="motorcycle-monthly" class="prices">
-                <input type="radio" id="motorcycle-monthly" name="motorcycle-price" value="1000" />$1000 Yearly
+                <input type="radio" id="motorcycle-monthly" name="motorcycle-price" value="1000" /><span class="currencySymbol"> &#8377; </span>  <span class="currencyValue">1000</span> Yearly
             </label>
-            <a href="#" target="_blank">
+            <a href="#pricing">
                 <button class="btn-purchase btn-primary"> Purchase Now </button> </a>
         </div>
         <div class="pricing-card" id="four-wheeler">
             <h3 class="heading-secondary">Four Wheeler</h3>
-            <div class="price-highlight"><strong> $500 </strong> / month</div>
+            <div class="price-highlight"><strong> <span class="currencySymbol"> &#8377; </span> <span class="currencyValue">500</span>  </strong> / month</div>
             <label for="four-wheeler-daily" class="prices">
-                <input type="radio" id="four-wheeler-daily" name="four-wheeler-price" value="20" required />$20 Daily
+                <input type="radio" id="four-wheeler-daily" name="four-wheeler-price" value="20" required /><span class="currencySymbol"> &#8377; </span> <span class="currencyValue">20</span>  Daily
             </label>
             <label for="four-wheeler-monthly" class="prices">
-                <input type="radio" id="four-wheeler-monthly" name="four-wheeler-price" value="500" />$500 Monthly
+                <input type="radio" id="four-wheeler-monthly" name="four-wheeler-price" value="500" /><span class="currencySymbol"> &#8377; </span> <span class="currencyValue">500</span>  Monthly
             </label>
             <label for="four-wheeler-monthly" class="prices">
-                <input type="radio" id="four-wheeler-monthly" name="four-wheeler-price" value="3500" />$3500 Yearly
+                <input type="radio" id="four-wheeler-monthly" name="four-wheeler-price" value="3500" /><span class="currencySymbol"> &#8377; </span> <span class="currencyValue">3500</span>  Yearly
             </label>
-            <a href="#" target="_blank">
+            <a href="#pricing">
                 <button class="btn-purchase btn-primary"> Purchase Now </button> </a>
         </div>
     </section>

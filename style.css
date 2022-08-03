@@ -287,6 +287,15 @@ a#addVehicleBtn {
 .prices input[type=radio] {
     margin: 0px 8px;
 }
+#currency {
+    flex-basis: 100%;
+    font-size: 18px;
+    text-align: center;
+    font-family: 'Roboto',sans-serif;
+}
+#currencySelect {
+    width: 8%;
+}
 /* footer */
 footer {
     background: #000;

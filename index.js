@@ -45,15 +45,15 @@ addVehicleBtn.addEventListener('click', () => {
 
 // change input border according to password strength
 const inputPassword = document.getElementById('password');
+const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/;
 inputPassword.addEventListener('keydown', () => {
-    const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/;
-    if(inputPassword.value.length < 8) {
+    if(inputPassword.value.length < 5) {
         inputPassword.style.border = "2px solid red";
     }
-    else if (inputPassword.length >= 8 && !inputPassword.value.match(passwordRegex)) {
+    else if (inputPassword.value.length > 5 && inputPassword.value.length < 8) {
         inputPassword.style.border = "2px solid orange";
     }
-    else if (inputPassword.length >= 8 && inputPassword.value.match(passwordRegex)) {
+    else if (inputPassword.value.length > 7){
         inputPassword.style.border = "2px solid green";
     }
 });
@@ -171,7 +171,6 @@ function checkPhoneNumber(inputField) {
     }
 }
 function checkPassword(inputPassword) {
-    const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/;
     if (inputPassword.value.match(passwordRegex)) {
         return true;
     }

@@ -143,6 +143,9 @@ html {
     border-radius: 5px;
     width: 50%;
 }
+input#password {
+    outline: transparent !important;
+}
 #employee .heading-primary, #vehicle .heading-primary {
     width: 40vw;
     margin: 10px 0px;

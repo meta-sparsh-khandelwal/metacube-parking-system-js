@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&family=Roboto&display=swap"
         rel="stylesheet">
     <!-- external stylesheet -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Metacube Parking System</title>
 </head>
 
@@ -124,53 +124,68 @@
         <div class="pricing-card" id="cycle">
             <h3 class="heading-secondary">Cycle</h3>
             <div class="price-highlight"><strong><span class="currencySymbol"> &#8377; </span> <span class="currencyValue">100</span> </strong> / month</div>
-            <label for="cycle-daily" class="prices">
-                <input type="radio" id="cycle-daily" name="cycle-price" value="5" required /><span class="currencySymbol"> &#8377; </span> <span class="currencyValue">5</span>  Daily
-            </label>
-            <label for="cycle-monthly" class="prices">
-                <input type="radio" id="cycle-monthly" name="cycle-price" value="100" /><span class="currencySymbol"> &#8377; </span> <span class="currencyValue">100</span>  Monthly
-            </label>
-            <label for="cycle-monthly" class="prices">
-                <input type="radio" id="cycle-monthly" name="cycle-price" value="500" /><span class="currencySymbol"> &#8377; </span> <span class="currencyValue">500</span>  Yearly
-            </label>
-            <a href="#pricing">
+            <div id="pricings">
+                <label for="cycle-daily" class="prices">
+                    <input type="radio" id="cycle-daily" name="cycle-price" value="0.063" required /><span class="currencySymbol"> &#8377; </span> <span class="currencyValue">5</span>  Daily
+                </label>
+                <label for="cycle-monthly" class="prices">
+                    <input type="radio" id="cycle-monthly" name="cycle-price" value="1.26" /><span class="currencySymbol"> &#8377; </span> <span class="currencyValue">100</span>  Monthly
+                </label>
+                <label for="cycle-monthly" class="prices">
+                    <input type="radio" id="cycle-monthly" name="cycle-price" value="6.32" /><span class="currencySymbol"> &#8377; </span> <span class="currencyValue">500</span>  Yearly
+                </label>
+            </div>
+            <a href="#pricing" id="purchaseBtnCycle">
                 <button class="btn-purchase btn-primary"> Purchase Now </button> </a>
+            <div class="final-price">
+
+            </div>
         </div>
         <div class="pricing-card" id="motorcycle">
             <h3 class="heading-secondary">MotorCycle</h3>
             <div class="price-highlight"><strong> <span class="currencySymbol"> &#8377; </span> <span class="currencyValue">200</span> </strong> / month</div>
-            <label for="motorcycle-daily" class="prices">
-                <input type="radio" id="motorcycle-daily" name="motorcycle-price" value="10" required /><span class="currencySymbol"> &#8377; </span><span class="currencyValue">10</span> Daily
-            </label>
-            <label for="motorcycle-monthly" class="prices">
-                <input type="radio" id="motorcycle-monthly" name="motorcycle-price" value="200" /><span class="currencySymbol"> &#8377; </span> <span class="currencyValue">200</span> Monthly
-            </label>
-            <label for="motorcycle-monthly" class="prices">
-                <input type="radio" id="motorcycle-monthly" name="motorcycle-price" value="1000" /><span class="currencySymbol"> &#8377; </span>  <span class="currencyValue">1000</span> Yearly
-            </label>
-            <a href="#pricing">
+            <div id="pricings">
+                <label for="motorcycle-daily" class="prices">
+                    <input type="radio" id="motorcycle-daily" name="motorcycle-price" value="0.13" required /><span class="currencySymbol"> &#8377; </span><span class="currencyValue">10</span> Daily
+                </label>
+                <label for="motorcycle-monthly" class="prices">
+                    <input type="radio" id="motorcycle-monthly" name="motorcycle-price" value="2.53" /><span class="currencySymbol"> &#8377; </span> <span class="currencyValue">200</span> Monthly
+                </label>
+                <label for="motorcycle-monthly" class="prices">
+                    <input type="radio" id="motorcycle-monthly" name="motorcycle-price" value="12.64" /><span class="currencySymbol"> &#8377; </span>  <span class="currencyValue">1000</span> Yearly
+                </label>
+            </div>
+            <a href="#pricing" id="purchaseBtnMotorcycle">
                 <button class="btn-purchase btn-primary"> Purchase Now </button> </a>
+            <div class="final-price">
+
+            </div>
         </div>
         <div class="pricing-card" id="four-wheeler">
             <h3 class="heading-secondary">Four Wheeler</h3>
             <div class="price-highlight"><strong> <span class="currencySymbol"> &#8377; </span> <span class="currencyValue">500</span>  </strong> / month</div>
-            <label for="four-wheeler-daily" class="prices">
-                <input type="radio" id="four-wheeler-daily" name="four-wheeler-price" value="20" required /><span class="currencySymbol"> &#8377; </span> <span class="currencyValue">20</span>  Daily
-            </label>
-            <label for="four-wheeler-monthly" class="prices">
-                <input type="radio" id="four-wheeler-monthly" name="four-wheeler-price" value="500" /><span class="currencySymbol"> &#8377; </span> <span class="currencyValue">500</span>  Monthly
-            </label>
-            <label for="four-wheeler-monthly" class="prices">
-                <input type="radio" id="four-wheeler-monthly" name="four-wheeler-price" value="3500" /><span class="currencySymbol"> &#8377; </span> <span class="currencyValue">3500</span>  Yearly
-            </label>
-            <a href="#pricing">
+            <div id="pricings">
+                <label for="four-wheeler-daily" class="prices">
+                    <input type="radio" id="four-wheeler-daily" name="four-wheeler-price" value="0.25" required /><span class="currencySymbol"> &#8377; </span> <span class="currencyValue">20</span>  Daily
+                </label>
+                <label for="four-wheeler-monthly" class="prices">
+                    <input type="radio" id="four-wheeler-monthly" name="four-wheeler-price" value="6.32" /><span class="currencySymbol"> &#8377; </span> <span class="currencyValue">500</span>  Monthly
+                </label>
+                <label for="four-wheeler-monthly" class="prices">
+                    <input type="radio" id="four-wheeler-monthly" name="four-wheeler-price" value="44.25" /><span class="currencySymbol"> &#8377; </span> <span class="currencyValue">3500</span>  Yearly
+                </label>
+            </div>
+            <a href="#pricing" id="purchaseBtnFourWheeler">
                 <button class="btn-purchase btn-primary"> Purchase Now </button> </a>
+            <div class="final-price">
+                
+            </div>
         </div>
     </section>
     <footer>
         Copyright &copy; 2022 Metacube.com. All rights reserved.
     </footer>
 </body>
-<script src="index.js"></script>
+<script src="src/index.js"></script>
 
 </html>

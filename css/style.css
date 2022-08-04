@@ -111,7 +111,14 @@ html {
 }
 #banner {
     height: 60vh;
-    background: url(images/banner.jpg);
+    background: url(../images/banner.jpg);
+}
+div#pricings {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 50%;
+    margin: 5px auto;
 }
 /* add employee section */
 #employee {
@@ -272,7 +279,7 @@ a#addVehicleBtn {
     padding: 25px 0px;
     border: 2px solid #bf34a8;
     border-radius: 50%;
-    width: 100px;
+    width: 110px;
     height: 100px;
     margin-left: 33%;
 }
@@ -286,6 +293,11 @@ a#addVehicleBtn {
     padding: 4px 0px;
     font-family: 'Roboto', sans-serif;
     display: block;
+}
+.final-price {
+    margin-top: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
 }
 .prices input[type=radio] {
     margin: 0px 8px;

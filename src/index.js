@@ -14,7 +14,6 @@ employeeForm.addEventListener("submit", (e) => {
     collapsible[0].innerText = `Employee created with empId: ${getRandomNumberBetween(100, 200)}`;
 });
 
-
 const employeeInputFields = document.getElementsByClassName("employeeInput");
 const vehicleInputFields = document.getElementsByClassName("vehicleInput");
 // showing first input field only for employee form, hiding all other fields
@@ -46,14 +45,15 @@ addVehicleBtn.addEventListener('click', () => {
 // change input border according to password strength
 const inputPassword = document.getElementById('password');
 const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/;
-inputPassword.addEventListener('keydown', () => {
+inputPassword.addEventListener('keypress', (event) => {
+    console.log("sparsh " + event);
     if(inputPassword.value.length < 5) {
         inputPassword.style.border = "2px solid red";
     }
-    else if (inputPassword.value.length > 5 && inputPassword.value.length < 8) {
+    else if (inputPassword.value.length > 5 && inputPassword.value.length <= 8) {
         inputPassword.style.border = "2px solid orange";
     }
-    else if (inputPassword.value.length > 7){
+    else if (inputPassword.value.length > 8){
         inputPassword.style.border = "2px solid green";
     }
 });
@@ -229,3 +229,29 @@ function yen() {
         currencyValues[index].innerText = yenValues[index];
     }
 }
+
+const purchaseBtnCycle = document.getElementById("purchaseBtnCycle");
+const purchaseBtnMotorcycle = document.getElementById("purchaseBtnMotorcycle");
+const purchaseBtnFourWheeler = document.getElementById("purchaseBtnFourWheeler");
+
+purchaseBtnCycle.addEventListener('click', (e) => {
+    e.preventDefault();
+    const price = document.querySelector('input[name="cycle-price"]:checked').value;
+    const finalPricingDiv = purchaseBtnCycle.nextElementSibling;
+    finalPricingDiv.innerText = "Purchased Price: $ " + price;    
+});
+
+purchaseBtnMotorcycle.addEventListener('click', (e) => {
+    e.preventDefault();
+    const price = document.querySelector('input[name="motorcycle-price"]:checked').value;
+    const finalPricingDiv = purchaseBtnMotorcycle.nextElementSibling;
+    finalPricingDiv.innerText = "Purchased Price: $ " + price;
+});
+
+purchaseBtnFourWheeler.addEventListener('click', (e) => {
+    e.preventDefault();
+    console.log(document.querySelector('input[name="four-wheeler-price"]:checked'));
+    const price = document.querySelector('input[name="four-wheeler-price"]:checked').value;
+    const finalPricingDiv = purchaseBtnFourWheeler.nextElementSibling;
+    finalPricingDiv.innerText = "Purchased Price: $ " + price;    
+});

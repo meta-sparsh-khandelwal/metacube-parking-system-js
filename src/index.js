@@ -1,8 +1,8 @@
 //selecting all collapse class elements
 let collapsible = document.getElementsByClassName("collapse");
 // hides or shows the collapsible forms when clicked
-for (let i = 0; i < collapsible.length; i++) {
-    collapsible[i].addEventListener("click", showOrHideCollapsible);
+for (let collapsibleElement of collapsible) {
+    collapsibleElement.addEventListener("click", showOrHideCollapsible);
 }
 
 // showing employee id after adding employee
@@ -46,7 +46,6 @@ addVehicleBtn.addEventListener('click', () => {
 const inputPassword = document.getElementById('password');
 const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/;
 inputPassword.addEventListener('keypress', (event) => {
-    console.log("sparsh " + event);
     if(inputPassword.value.length < 5) {
         inputPassword.style.border = "2px solid red";
     }
@@ -129,8 +128,8 @@ function hideAllInputFieldsExcept(inputFieldsArray, showIndex) {
 function changeInputLabelEmployee() {
     let employeeName = employeeInputFields[0].children.item(0).value;
     const employeeLabelTextFields = document.getElementsByClassName('employeeLabelText');
-    for (let index = 0; index < employeeLabelTextFields.length; index++) {
-        employeeLabelTextFields[index].innerText = `Hi ${employeeName} please enter your ${employeeLabelTextFields[index].innerText}`;
+    for (let employeeLabel of employeeLabelTextFields) {
+        employeeLabel.innerText = `Hi ${employeeName} please enter your ${employeeLabel.innerText}`;
     }
 }
 
